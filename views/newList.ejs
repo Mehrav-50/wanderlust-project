@@ -1,0 +1,54 @@
+<% layout("/layouts.ejs/head.ejs") -%>
+
+    <div class = "row">
+        <div class = "col-md-12 offset-auto">
+            <br>
+    <h1>Create a new List</h1>
+    <br>
+     <form method = "post" class = "needs-validation" novalidate action ="/listings" enctype="multipart/form-data">
+        <div>
+            <label for = "title" class = "form-label">Title</label>
+        <input type = "text" id ="title"name = "listing[title]" placeholder = "enter title" class ="form-control" required>
+        <div class = "valid-feedback">Title is looking Awesome!</div>
+        <div class = "invalid-feedback">Please add a Title</div>
+    </div>
+        <br>
+        <div>
+            <label class = "form-label" for ="description" >Description</label>
+        <textarea type = "text"class ="form-control" required name = "listing[description]" id = "description"placeholder = "enter description"></textarea>
+        <div class = "valid-feedback">Description is good!</div>
+        <div class = "invalid-feedback">Please add some Description</div>
+        <br></div>
+        <div>
+            <label class = "form-label"for = "image">Image URL</label>
+        <input name = "listing[image]"class ="form-control" type="file" required placeholder="enter image link/URL" id ="image">
+        <div class = "invalid-feedback">Please add an image of the Place</div>
+        <div class = "valid-feedback">Image is wonderful 	&#xf584;</div>
+        <br></div>
+        <div class ="row">
+        <div class = "col-md-4">
+            <label for = "price" required class = "form-label">Price</label>
+        <input name = "listing[price]"class ="form-control" id= "price" required placeholder = "enter price" type ="number">
+        <div class = "invalid-feedback">Please add a Valid Price for the Place!</div>
+        <div class = "valid-feedback">Price is good for the place</div>
+        <br></div>
+        <div class ="col-md-8">
+            <label class = "form-label " required for = "country">Country</label>
+        <input name = "listing[country]" placeholder = "enter country"class ="form-control " required id ="country" type ="text">
+        
+        <div class = "invalid-feedback">Please enter in which country the place is!</div>
+        <div class = "valid-feedback">All Set !</div>
+        <br></div></div></div>
+        <div class = "mb-3">
+            <label for = "location" class = "form-label">Location</label>
+        <input name = "listing[location]" id = "location"placeholder = "enter location" required class ="form-control mb-3"type = "text">
+        <div class = "invalid-feedback">Please add place's location</div>
+        <div class = "valid-feedback">All Set !</div></div>
+   
+     
+           <button class="col-md-1 btn btn-danger ms-2 mb-3">Add</button>     
+        </form>
+    
+    </div>
+</div>
+

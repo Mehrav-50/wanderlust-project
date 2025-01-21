@@ -1,0 +1,59 @@
+<% layout("/layouts.ejs/head.ejs") -%>
+<div class = "row mb-3">
+ <div class = "col-md-12 ">
+    <br>
+        <h1>Editing List</h1><br>
+    <form method = "POST" novalidate class = "needs-validation"action = "/listings/<%=getList.id%>?_method=PUT" 
+        enctype = "multipart/form-data">
+       
+    <div class = "mb-3">
+       <label for = "abc" class = "form-label">Title</label>
+        <input name = "listing[title]" id  = "abc"  class = "form-control" required value ="<%=getList.title%>">
+        <div class = "invalid-feedback">Please add a new Title !</div>
+        <div class = "valid-feedback">Title is looking Awesome !</div>
+    </div>
+     <div class = "mb-3">
+    <label for = "des" class = "form-label">Description</label>
+        <textarea name = "listing[description]" id = "des" class = "form-control" required > <%=getList.description%></textarea>
+        <div class = "invalid-feedback">Please add a new Description</div>
+        <div class = "valid-feedback">Description is good</div>
+    </div> 
+    <div class = "mb-3" >
+        Original Listing Image <br>
+        <img src = "<%=originalImageUrl%>" style = "height: 200px; width : 250px;">
+    </div>
+    <div class = "mb-3">
+    
+        <label for = "img" class = "form-label" required>Image URL</label>
+       
+        <input name = "listing[image]" id = "img" class = "form-control" type = "file" required value="<%=getList.image%>">
+        <div class = "invalid-feedback">Please add a new Image</div>
+        <div class = "valid-feedback">Image is wonderful !</div>
+    </div>
+    <div class = "row">
+    <div class = "mb-3 col-md-4">
+        <label class = "form-label" for = "price" required >Price</label>
+        <input name = "listing[price]" id = "price" class = "form-control" required value = "<%=getList.price%>">
+        <div class = "invalid-feedback">Please add a new Price to the Place</div>
+        <div class = "valid-feedback">The Price set is good!</div>
+            </div>
+                <div class = "mb-3 col-md-8"> 
+                    <label class = "form-label" for = "cou">Country</label> 
+                    <input id ="cou"class = "form-control" required name = "listing[country]" value = "<%=getList.country%>">
+                    <div class = "invalid-feedback">Please add a Country of the Place</div>
+                    <div class = "valid-feedback">All Set !</div>
+                </div>
+             </div>
+             </div>
+                    <div class = "mb-3">
+                        <label for = "loc" class = "form-label">Location</label> 
+                        <input id = "loc" class = "form-control" required name = "listing[location]" value = "<%=getList.location%>">
+                        <div class = "invalid-feedback">Please add place's location</div>
+                        <div class = "valid-feedback">All Set !</div>
+                    </div>
+        <button class = "col-md-1 ms-2 mt-3 btn btn-danger">Edit</button>
+       
+    </form>
+</div>
+</div>
+

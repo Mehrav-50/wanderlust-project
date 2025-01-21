@@ -1,0 +1,26 @@
+<% layout("/layouts.ejs/head.ejs")%>
+<div class = "row special-row">
+    <div class="col-md-12 " >
+        <h1>SignUp On Wanderlust</h1>
+        <form action = "/signup" method = "post" novalidate class = "needs-validation">
+            <div class = "mt-3 mb-3">
+                <label for = "email" class = "form-label">Email</label>
+                <input type="email" placeholder = "enter your email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder = "enter username"id="username" name="username" required>
+                <div class="invalid-feedback">Please enter a valid username.</div>
+            </div>
+            <div class="mt-3 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder = "enter password" name="password" required>
+                <div class="invalid-feedback">Please enter a password.</div>
+            </div>
+        
+            <button  class="btn btn-success mt-3">Sign Up</button> 
+        </form>
+        <form action = "/login"><button style = "position : relative; left : 8rem; bottom : 3.3rem;" class="btn btn-primary mt-3">Login</button></form>
+    </div>
+</div>
